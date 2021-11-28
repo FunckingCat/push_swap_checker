@@ -8,14 +8,15 @@ YELLOW='\033[1;33m'
 DARKGRAY='\033[1;30m'
 WHITE='\033[1;37m'
 
-TotalNbTest=3  # Сколько всего тестов запускать
 PS_PATH="../push_swap/" # Путь до пушсвапа
 CHECKER_PATH="./"
 CHECKER_NAME="checker_linux"
 
 printf "${GREEN}Testing push_swap\n\n${NOCOLOR}" >&1
-
+##############################################
+TotalNbTest=10
 stack_size=5
+##############################################
 TOTAL=0
 MAX=0
 printf "${DARKGRAY} TEST FOR STACK SIZE 5\n\n${NOCOLOR}"
@@ -29,7 +30,7 @@ for ((testNB = 0; testNB < $TotalNbTest; testNB++)); do
 		printf "${GREEN}$RESULT_CHECKER ${NOCOLOR}"
 	fi
 	MOVES=` cat push_swap_result.txt | wc -l`
-	#printf "${GREEN} $MOVES ${NOCOLOR} instructions\n"
+	#printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
 	TOTAL=$(( $TOTAL + $MOVES ))
 	if (( $MAX < $MOVES )); then
 		MAX=$(( $MOVES ))
@@ -39,8 +40,10 @@ printf "\n"
 MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
-
+############################################################
+TotalNbTest=20
 stack_size=100
+############################################################
 TOTAL=0
 MAX=0
 printf "${DARKGRAY} TEST FOR STACK SIZE 100\n\n${NOCOLOR}"
@@ -54,7 +57,7 @@ for ((testNB = 0; testNB < $TotalNbTest; testNB++)); do
 		printf "${GREEN}$RESULT_CHECKER ${NOCOLOR}"
 	fi
 	MOVES=` cat push_swap_result.txt | wc -l`
-	#printf "${GREEN} $MOVES ${NOCOLOR} instructions\n"
+	#printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
 	TOTAL=$(( $TOTAL + $MOVES ))
 	if (( $MAX < $MOVES )); then
 		MAX=$(( $MOVES ))
@@ -64,7 +67,10 @@ printf "\n"
 MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
+###############################################################
+TotalNbTest=5
 stack_size=500
+##############################################################
 TOTAL=0
 MAX=0
 printf "${DARKGRAY} TEST FOR STACK SIZE 500\n\n${NOCOLOR}"
@@ -78,7 +84,7 @@ for ((testNB = 0; testNB < $TotalNbTest; testNB++)); do
 		printf "${GREEN}$RESULT_CHECKER ${NOCOLOR}"
 	fi
 	MOVES=` cat push_swap_result.txt | wc -l`
-	#printf "${GREEN} $MOVES ${NOCOLOR} instructions\n"
+	#printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
 	TOTAL=$(( $TOTAL + $MOVES ))
 	if (( $MAX < $MOVES )); then
 		MAX=$(( $MOVES ))
@@ -88,4 +94,4 @@ printf "\n"
 MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
-rm -f push_swap_result.txt
+#rm -f push_swap_result.txt
