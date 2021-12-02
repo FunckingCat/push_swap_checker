@@ -41,7 +41,7 @@ MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
 ############################################################
-TotalNbTest=100
+TotalNbTest=10
 stack_size=100
 ############################################################
 TOTAL=0
@@ -68,7 +68,7 @@ MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
 ###############################################################
-TotalNbTest=3
+TotalNbTest=5
 stack_size=500
 ##############################################################
 TOTAL=0
