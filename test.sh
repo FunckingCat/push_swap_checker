@@ -8,7 +8,7 @@ YELLOW='\033[1;33m'
 DARKGRAY='\033[1;30m'
 WHITE='\033[1;37m'
 
-PS_PATH="../push_swap/" # Путь до пушсвапа
+PS_PATH="../gh_push_swap/" # Путь до пушсвапа
 CHECKER_PATH="./"
 CHECKER_NAME="checker_mac"
 
@@ -41,7 +41,7 @@ MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
 ############################################################
-TotalNbTest=10
+TotalNbTest=100
 stack_size=100
 ############################################################
 TOTAL=0
@@ -57,7 +57,7 @@ for ((testNB = 0; testNB < $TotalNbTest; testNB++)); do
 		printf "${GREEN}$RESULT_CHECKER ${NOCOLOR}"
 	fi
 	MOVES=` cat push_swap_result.txt | wc -l`
-	#printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
+	printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
 	TOTAL=$(( $TOTAL + $MOVES ))
 	if (( $MAX < $MOVES )); then
 		MAX=$(( $MOVES ))
@@ -84,7 +84,7 @@ for ((testNB = 0; testNB < $TotalNbTest; testNB++)); do
 		printf "${GREEN}$RESULT_CHECKER ${NOCOLOR}"
 	fi
 	MOVES=` cat push_swap_result.txt | wc -l`
-	#printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
+	printf "${YELLOW} $MOVES ${NOCOLOR} instructions\n"
 	TOTAL=$(( $TOTAL + $MOVES ))
 	if (( $MAX < $MOVES )); then
 		MAX=$(( $MOVES ))
