@@ -10,11 +10,11 @@ WHITE='\033[1;37m'
 
 PS_PATH="../push_swap/" # Путь до пушсвапа
 CHECKER_PATH="./"
-CHECKER_NAME="checker_linux"
+CHECKER_NAME="checker_mac"
 
 printf "${GREEN}Testing push_swap\n\n${NOCOLOR}" >&1
 ##############################################
-TotalNbTest=10
+TotalNbTest=5
 stack_size=5
 ##############################################
 TOTAL=0
@@ -41,7 +41,7 @@ MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
 ############################################################
-TotalNbTest=20
+TotalNbTest=10
 stack_size=100
 ############################################################
 TOTAL=0
@@ -68,7 +68,7 @@ MEAN=$(( $TOTAL / $TotalNbTest ))
 printf "\n${YELLOW}MAX: $MAX  ${WHITE}Mean: $MEAN ${DARKGRAY}for stack of size ${LIGHTGRAY}$stack_size \n\n"
 
 ###############################################################
-TotalNbTest=5
+TotalNbTest=3
 stack_size=500
 ##############################################################
 TOTAL=0
