@@ -1,3 +1,3 @@
 # push swap checker
 
-Checker for push_sqap project
+Checker for push_swap project
